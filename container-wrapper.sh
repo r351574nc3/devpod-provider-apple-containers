@@ -9,7 +9,7 @@ IMAGE="${IMAGE:-ubuntu}"  # Override via env or args
 
 case "$ACTION" in
   create)
-    container run --name "$CONTAINER_NAME" --name "$IMAGE" --detach -- bash
+    container run --detach --name "$CONTAINER_NAME" "$IMAGE" bash
     ;;
   start)
     container start "$CONTAINER_NAME"
