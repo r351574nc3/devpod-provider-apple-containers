@@ -21,7 +21,7 @@ case "$ACTION" in
     container rm "$CONTAINER_NAME"
     ;;
   status)
-    container inspect "$CONTAINER_NAME" | jq -r '.State.Status'
+    container inspect "$CONTAINER_NAME" | jq -r '.[0].status'
     ;;
   exec)
     container exec "$CONTAINER_NAME" "$@"
