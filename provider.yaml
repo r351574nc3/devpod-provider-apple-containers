@@ -1,0 +1,18 @@
+name: apple-container
+description: DevPod provider shim for Apple container CLI on macOS
+version: 0.1.0
+entrypoint: ./provider.sh
+supportedCommands:
+  - create
+  - start
+  - stop
+  - delete
+  - status
+  - exec
+  - logs
+platforms:
+  - darwin/arm64
+requirements:
+  - macOS 15 or later
+  - Apple container CLI installed
+  - container system started
